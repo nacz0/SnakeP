@@ -262,11 +262,16 @@ int main()
                 text.setPosition(START_X + 270, START_Y + 350);
                 text.setFillColor(sf::Color(0, 0, 0));
                 oknoAplikacji.draw(text);
+                text.setString("Score:" + std::to_string(snakeX.size() - 1));
+                text.setPosition(START_X + 330, START_Y + 500);
+                text.setFillColor(sf::Color(0, 0, 0));
+                oknoAplikacji.draw(text);
             }
 
             if (canRestart) {
+                
                 text.setString("Restart");
-                text.setPosition(START_X + 320, START_Y + 500);
+                text.setPosition(START_X + 320, START_Y + 700);
                 text.setFillColor(blink ? sf::Color(255, 255, 255) : sf::Color(250, 145, 60));
                 oknoAplikacji.draw(text);
             }
